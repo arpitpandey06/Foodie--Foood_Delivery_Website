@@ -24,9 +24,9 @@
             <ul class="navlist flex gap-3">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About US</a></li>
-                <li><a href="">Contacts</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About US</a></li>
+                <li><a href="#contact">Contacts</a></li>
             </ul>
 
             <div class="desktop-action flex gap-2">
@@ -35,7 +35,7 @@
                     <span class="cart-value">0</span>
                 </a>
 
-                <a href="#" class="btn">SignIn &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i>
+                <a href="#" class="btn">Sign In &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i>
                 </a>
 
                 <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
@@ -43,11 +43,11 @@
 
             <!-- mobile-menu -->
             <ul class="mobile-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About US</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About US</a></li>
+                <li><a href="#contact">Contacts</a></li>
                 <li> <a href="#" class="btn">SignIn &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i>
                     </a></li>
             </ul>
@@ -57,7 +57,7 @@
 
     <!-- SECTIONS PART -->
     <main>
-        <section>
+        <section id="home">
             <div class="hero-section flex wrapper gap-4">
                 <div class="content">
                     <h1>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="assets/delivery-boy.png" alt="">
+                    <img src="assets/delivery-boy.png" alt="Delivery Boy">
                 </div>
 
             </div>
@@ -99,7 +99,7 @@
         <!--  ======================================  -->
         <!--  -------------Section 02---------------- -->
 
-        <section>
+        <section id="services">
             <div class="p-top wrapper">
                 <div class="text-center">
                     <h5>
@@ -115,7 +115,7 @@
                 <div class="flex text-center mt-4 gap-4">
                     <div class="service-card">
                         <div class="images-container">
-                            <img src="assets/easy-to-order.png" alt="">
+                            <img src="assets/easy-to-order.png" alt="Easy to Order">
                         </div>
 
                         <h3>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="service-card">
                         <div class="images-container">
-                            <img src="assets/fast-delivery.png">
+                            <img src="assets/fast-delivery.png" alt="Fast Delivery">
                         </div>
 
                         <h3>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="service-card">
                         <div class="images-container">
-                            <img src="assets/best-quality.png">
+                            <img src="assets/best-quality.png" alt="Best Quality">
                         </div>
 
                         <h3>
@@ -158,7 +158,7 @@
 
         <!--  ======================================  -->
         <!--  -------------Section 03---------------- -->
-        <section>
+        <section id="menu">
             <div class="wrapper p-top ">
                 <div class="text-center">
                     <h5>
@@ -171,56 +171,221 @@
                 </div>
 
 
-                <!-- <div class="card-list text-center flex mt-4 gap-2 ">
-                <div class="order-card">
-                    <div class="card-image">
-                        <img src="assets/burger.png">
+                <div class="card-list text-center flex mt-4 gap-2 ">
+                    <div class="order-card">
+                        <div class="card-image">
+                            <img src="assets/burger.png" alt="Burger">
+                        </div>
+                        <h4>
+                            Double Cheese Burger
+                        </h4>
+                        <h4 class="price">
+                            $200
+                        </h4>
+                        <a href="#" class="btn">Add To Cart</a>
                     </div>
-                    <h4>
-                        Double Cheese Burger
-                    </h4>
-                    <h4 class="price">
-                        $200
-                    </h4>
-                    <a href="#" class="btn">Add To Cart</a>
+                    <div class="order-card">
+                        <div class="card-image">
+                            <img src="assets/pizza.png" alt="Pizza">
+                        </div>
+                        <h4>
+                            Pepperoni Pizza
+                        </h4>
+                        <h4 class="price">
+                            $350
+                        </h4>
+                        <a href="#" class="btn">Add To Cart</a>
+                    </div>
+                    <div class="order-card">
+                        <div class="card-image">
+                            <img src="assets/fries.png" alt="Fries">
+                        </div>
+                        <h4>
+                            Crispy Fries
+                        </h4>
+                        <h4 class="price">
+                            $120
+                        </h4>
+                        <a href="#" class="btn">Add To Cart</a>
+                    </div>
                 </div>
-            </div> -->
             </div>
         </section>
 
 
         <!--  ======================================  -->
-        <!--  -------------Section 03 --------------- -->
+        <!--  -------------Section 04 --------------- -->
 
-        <section>
+        <section id="reviews">
             <div class="wrapper p-top flex gap-3">
                 <div class="image-container">
-                    <img src="/assets/delivery-boy-with-phone.png">
+                    <img src="assets/delivery-boy-with-phone.png" alt="Delivery Boy with Phone">
                 </div>
 
                 <div class="content">
                     <h5>Our Reviews</h5>
                     <h2>What They Say ?</h2>
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
+
+                    <div class="review-container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="assets/profile1.jpeg" alt="Profile 1">
+                                        </div>
+
+                                        <div>
+                                            <h4>Rajat Sharma</h4>
+                                            <div class="mt-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <p>
+                                        "I've tried several recipes from this site, and each one has turned out amazing.
+                                        The
+                                        instructions are clear, and the flavors are spot on."
+                                    </p>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="assets/profile2.jpeg" alt="Profile 2">
+                                        </div>
+
+                                        <div>
+                                            <h4>Meena Iyer</h4>
+                                            <div class="mt-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <p>
+                                        "This website has become my go-to for Indian recipes. The dishes are authentic,
+                                        and everything I've made so far has impressed my family."
+                                    </p>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="assets/profile3.jpeg" alt="Profile 3">
+                                        </div>
+
+                                        <div>
+                                            <h4>Vaishali Mittal</h4>
+                                            <div class="mt-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <p>
+                                        "Really impressed by the quality and presentation. It's not just a recipe site —
+                                        it feels like cooking with a trusted friend."
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex between">
+                                <a href="#" class="arrow" id="prev">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+
+                                <a href="#" class="arrow" id="next">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <section>
+            <div class="wrapper p-top ">
+                <div class="app-container flex gap-3">
+                    <div class="image-container">
+                        <img src="assets/mobile-app.png">
+                    </div>
+
+                    <div class="content">
+                        <h5>
+                            Our application
+                        </h5>
+
+                        <h2>
+                            Simple Way To <br> Order Your Food.
+                        </h2>
+
+                        <p class="para">
+                            Get Your Food Wherever And Whenever and Get Your Food Delivery Quickly
+                        </p>
+
+                        <a href="#" class="btn">Get The App</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--  ====================================== 
+      -------------Section 05 ----------------  -->
+
+        <section>
+            <div class="wrapper p-top">
+                <div class="text-center">
+                    <h5>
+                        Stay Updated
+                    </h5>
+
+                    <h2>
+                        Subscribe to Our Newsletter
+                    </h2>
+
+                    <p class="para m-auto">
+                        Join our newsletter and be the first to get the latest updates, exclusive offers, and delicious
+                        deals delivered straight to your inbox.
+                    </p>
+
+                    <label class="input-container flex m-auto">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email Address"
+                            autocomplete="off">
+                        <a href="#" class="btn">Subscribe</a>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+
+
+
     </main>
     <!-- FOOTER PART -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 

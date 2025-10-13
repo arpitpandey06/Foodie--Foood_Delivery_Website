@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    /* border: 2px solid red; */
+}
+
+:root {
+    --lead-color: #212121;
+    --gold-color: #ffc400;
+    --eye-ball: #fffdf7;
+    --hint-yellow: #ffda5f;
+    --white-color: #fff;
+}
+
+body {
+    background: var(--eye-ball);
+}
+
+/* BASIC STYLING */
+
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--lead-color);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style-type: none;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding-inline: 1.5rem;
+}
+
+img {
+    margin: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.p-top {
+    padding-top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER STYLING */
+
+.navbar {
+    min-height: 14vh;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: var(--gold-color);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.01) 0 2px 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--lead-color);
+}
+
+
+.cart-icon {
+    color: var(--lead-color);
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.cart-icon .cart-value {
+    position: absolute;
+    font-size: 0.85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-color);
+    color: var(--lead-color);
+    text-align: center;
+    line-height: 20px;
+    top: 50%;
+    right: -10px;
+}
+
+.desktop-action .hamburger {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTIONS STYLING */
+
+.hero-section {
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.image-container,
+.service-card {
+    flex: 1;
+    flex-basis: 300px;
+}
+
+h1 {
+    font-size: 5.6vw;
+    color: var(--lead-color);
+}
+
+h1 span {
+    color: var(--gold-color);
+}
+
+p {
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 2rem;
+    max-width: 550px;
+}
+
+.social-icon {
+    background: var(--hint-yellow);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.01) 0 2px 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: translateY(3px);
+    background: var(--lead-color);
+    color: var(--white-color);
+}
+
+
+
+/* Section 01 */
+
+h5 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: var(--gold-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead-color);
+}
+
+h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--lead-color);
+}
+
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ====================================== */
+/* -------------Section 02--------------- */
+
+.order-card {
+    flex: 1;
+    flex-basis: 300px;
+    padding: 0 1rem 2rem 1rem;
+    background: var(--white-color);
+    border: 0.1rem solid var(--gold-color);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 8px 8px 8px,
+        rgba(0, 0, 0, 0.09) 8px 8px 8px inset;
+}
+
+
+.order-card img {
+    width: 15rem;
+    filter: drop-shadow(
+        rgba(0, 0, 0, 0.2) 0 10px 10px 
+    );
+
+}
+
+h4{
+    font-size: 1.8rem;
+    color: var(--lead-color);
+}
+
+.order-card .price{
+    font-size: 1.7rem;
+    color: var(--gold-color);
+    padding: 1rem 0 2rem 0;
+}
+
+    /* ====================================== */
+    /* -------------Section 03---------------- */
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER STYLING */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width:780px) {
+
+    .navlist,
+    .desktop-action .btn {
+        display: none;
+    }
+
+    .desktop-action .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        transform: translateX(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background: var(--white-color);
+        border: 0.1rem solid var(--gold-color);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 8px,
+            rgba(0, 0, 0, 0.5) 8px 8px 8px inset;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mobile-menu-active {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Sections Styling */
+
+    /* ================================== */
+    /* Hero Section */
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    .content {
+        padding-top: 3rem;
+    }
+
+    .gap-2 {
+        gap: 1.4rem;
+    }
+
+    .gap-4 {
+        gap: 4rem;
+    }
+
+    /* ====================================== */
+    /* -------------Section 01---------------- */
+
+    h2 {
+        font-size: 3rem;
+    }
+
+
+    /* ====================================== */
+    /* -------------Section 02---------------- */
+}

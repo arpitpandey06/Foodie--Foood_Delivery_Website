@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Foodie || Food Delivery Website</title>
+    <title>Foodie || Food Delivery Website</title>
+    
+    <!-- External CSS Libraries -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
-    <!-- Header Part -->
+    <!-- Header Section -->
     <header>
-
         <nav class="navbar flex between wrapper">
-
+            <!-- Logo -->
             <a href="#" class="logo">Foodie.</a>
-            <!-- Desktop-menu -->
+            
+            <!-- Desktop Navigation Menu -->
             <ul class="navlist flex gap-3">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -29,203 +30,113 @@
                 <li><a href="#contact">Contacts</a></li>
             </ul>
 
+            <!-- Desktop Action Buttons -->
             <div class="desktop-action flex gap-2">
-                <a href="#" class="cart-icon">
+                <a href="#" class="cart-icon" id="cart-toggle">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-value">0</span>
                 </a>
 
-                <a href="#" class="btn">Sign In &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i>
-                </a>
+                <a href="#" class="btn">Sign In &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i></a>
 
+                <!-- Mobile Hamburger Menu -->
                 <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
             </div>
 
-            <!-- mobile-menu -->
+            <!-- Mobile Navigation Menu -->
             <ul class="mobile-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About US</a></li>
                 <li><a href="#contact">Contacts</a></li>
-                <li> <a href="#" class="btn">SignIn &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i>
-                    </a></li>
+                <li><a href="#" class="btn">SignIn &NonBreakingSpace;<i class="fa-solid fa-user-plus"></i></a></li>
             </ul>
         </nav>
-
     </header>
 
-    <!-- SECTIONS PART -->
+    <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
         <section id="home">
             <div class="hero-section flex wrapper gap-4">
                 <div class="content">
-                    <h1>
-                        Enjoy Your Delicious <span>Food</span>
-                    </h1>
-
+                    <h1>Enjoy Your Delicious <span>Food</span></h1>
                     <p class="para">
                         We Will Fill Your Tummy With delicious <br> food with fast delivery.
                     </p>
-
                     <div class="flex gap-2">
-                        <a href="#" class="btn">
-                            Order Now
-                        </a>
-
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-
+                        <a href="#" class="btn">Order Now</a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
                     </div>
                 </div>
-
                 <div class="image-container">
-                    <img src="assets/delivery-boy.png" alt="Delivery Boy">
+                    <img src="assets/delivery-boy.png" alt="Delivery Boy" class="floating-animation">
                 </div>
-
             </div>
         </section>
 
-        <!--  ======================================  -->
-        <!--  -------------Section 02---------------- -->
-
+        <!-- Services Section -->
         <section id="services">
             <div class="p-top wrapper">
                 <div class="text-center">
-                    <h5>
-                        Our Services
-                    </h5>
-
-                    <h2>
-                        How Does It Work ?
-                    </h2>
+                    <h5>Our Services</h5>
+                    <h2>How Does It Work ?</h2>
                 </div>
-
-
                 <div class="flex text-center mt-4 gap-4">
                     <div class="service-card">
                         <div class="images-container">
                             <img src="assets/easy-to-order.png" alt="Easy to Order">
                         </div>
-
-                        <h3>
-                            Easy To Order
-                        </h3>
-
-                        <p>
-                            You Only need a few steps to start ordering food.
-                        </p>
+                        <h3>Easy To Order</h3>
+                        <p>You Only need a few steps to start ordering food.</p>
                     </div>
                     <div class="service-card">
                         <div class="images-container">
                             <img src="assets/fast-delivery.png" alt="Fast Delivery">
                         </div>
-
-                        <h3>
-                            Fast Delivery
-                        </h3>
-
-                        <p>
-                            Delivery That is always ontime and faster
-                        </p>
+                        <h3>Fast Delivery</h3>
+                        <p>Delivery That is always ontime and faster</p>
                     </div>
                     <div class="service-card">
                         <div class="images-container">
                             <img src="assets/best-quality.png" alt="Best Quality">
                         </div>
-
-                        <h3>
-                            Best quality
-                        </h3>
-
-                        <p>
-                            Not Only fast we offers best quality too.
-                        </p>
+                        <h3>Best quality</h3>
+                        <p>Not Only fast we offers best quality too.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--  ======================================  -->
-        <!--  -------------Section 03---------------- -->
+        <!-- Menu Section -->
         <section id="menu">
-            <div class="wrapper p-top ">
+            <div class="wrapper p-top">
                 <div class="text-center">
-                    <h5>
-                        Our Menu
-                    </h5>
-
-                    <h2>
-                        The Most Popular
-                    </h2>
+                    <h5>Our Menu</h5>
+                    <h2>The Most Popular</h2>
                 </div>
-
-
-                <div class="card-list text-center flex mt-4 gap-2 ">
-                    <div class="order-card">
-                        <div class="card-image">
-                            <img src="assets/burger.png" alt="Burger">
-                        </div>
-                        <h4>
-                            Double Cheese Burger
-                        </h4>
-                        <h4 class="price">
-                            $200
-                        </h4>
-                        <a href="#" class="btn">Add To Cart</a>
-                    </div>
-                    <div class="order-card">
-                        <div class="card-image">
-                            <img src="assets/pizza.png" alt="Pizza">
-                        </div>
-                        <h4>
-                            Pepperoni Pizza
-                        </h4>
-                        <h4 class="price">
-                            $350
-                        </h4>
-                        <a href="#" class="btn">Add To Cart</a>
-                    </div>
-                    <div class="order-card">
-                        <div class="card-image">
-                            <img src="assets/fries.png" alt="Fries">
-                        </div>
-                        <h4>
-                            Crispy Fries
-                        </h4>
-                        <h4 class="price">
-                            $120
-                        </h4>
-                        <a href="#" class="btn">Add To Cart</a>
-                    </div>
+                <div class="card-list mt-4" id="menu-container">
+                    <!-- Menu items will be dynamically loaded here -->
+                </div>
+                <div class="load-more-container">
+                    <button class="btn" id="load-more">Load More</button>
                 </div>
             </div>
         </section>
 
-
-        <!--  ======================================  -->
-        <!--  -------------Section 04 --------------- -->
-
+        <!-- Reviews Section -->
         <section id="reviews">
             <div class="wrapper p-top flex gap-3">
                 <div class="image-container">
                     <img src="assets/delivery-boy-with-phone.png" alt="Delivery Boy with Phone">
                 </div>
-
                 <div class="content">
                     <h5>Our Reviews</h5>
                     <h2>What They Say ?</h2>
-
                     <div class="review-container">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
@@ -234,7 +145,6 @@
                                         <div class="profile">
                                             <img src="assets/profile1.jpeg" alt="Profile 1">
                                         </div>
-
                                         <div>
                                             <h4>Rajat Sharma</h4>
                                             <div class="mt-half">
@@ -245,22 +155,13 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <p>
-                                        "I've tried several recipes from this site, and each one has turned out amazing.
-                                        The
-                                        instructions are clear, and the flavors are spot on."
-                                    </p>
+                                    <p>"I've tried several recipes from this site, and each one has turned out amazing. The instructions are clear, and the flavors are spot on."</p>
                                 </div>
-
-
                                 <div class="swiper-slide">
                                     <div class="flex gap-2">
                                         <div class="profile">
                                             <img src="assets/profile2.jpeg" alt="Profile 2">
                                         </div>
-
                                         <div>
                                             <h4>Meena Iyer</h4>
                                             <div class="mt-half">
@@ -271,21 +172,13 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <p>
-                                        "This website has become my go-to for Indian recipes. The dishes are authentic,
-                                        and everything I've made so far has impressed my family."
-                                    </p>
+                                    <p>"This website has become my go-to for Indian recipes. The dishes are authentic, and everything I've made so far has impressed my family."</p>
                                 </div>
-
-
                                 <div class="swiper-slide">
                                     <div class="flex gap-2">
                                         <div class="profile">
                                             <img src="assets/profile3.jpeg" alt="Profile 3">
                                         </div>
-
                                         <div>
                                             <h4>Vaishali Mittal</h4>
                                             <div class="mt-half">
@@ -296,22 +189,12 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <p>
-                                        "Really impressed by the quality and presentation. It's not just a recipe site —
-                                        it feels like cooking with a trusted friend."
-                                    </p>
+                                    <p>"Really impressed by the quality and presentation. It's not just a recipe site — it feels like cooking with a trusted friend."</p>
                                 </div>
                             </div>
                             <div class="flex between">
-                                <a href="#" class="arrow" id="prev">
-                                    <i class="fa-solid fa-arrow-left"></i>
-                                </a>
-
-                                <a href="#" class="arrow" id="next">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
+                                <a href="#" class="arrow" id="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                                <a href="#" class="arrow" id="next"><i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -319,74 +202,132 @@
             </div>
         </section>
 
-
+        <!-- App Section -->
         <section>
-            <div class="wrapper p-top ">
+            <div class="wrapper p-top">
                 <div class="app-container flex gap-3">
                     <div class="image-container">
-                        <img src="assets/mobile-app.png">
+                        <img src="assets/mobile-app.png" alt="Mobile App">
                     </div>
-
                     <div class="content">
-                        <h5>
-                            Our application
-                        </h5>
-
-                        <h2>
-                            Simple Way To <br> Order Your Food.
-                        </h2>
-
-                        <p class="para">
-                            Get Your Food Wherever And Whenever and Get Your Food Delivery Quickly
-                        </p>
-
+                        <h5>Our application</h5>
+                        <h2>Simple Way To <br> Order Your Food.</h2>
+                        <p class="para">Get Your Food Wherever And Whenever and Get Your Food Delivery Quickly</p>
                         <a href="#" class="btn">Get The App</a>
                     </div>
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!--  ====================================== 
-      -------------Section 05 ----------------  -->
-
-        <section>
-            <div class="wrapper p-top">
-                <div class="text-center">
-                    <h5>
-                        Stay Updated
-                    </h5>
-
-                    <h2>
-                        Subscribe to Our Newsletter
-                    </h2>
-
-                    <p class="para m-auto">
-                        Join our newsletter and be the first to get the latest updates, exclusive offers, and delicious
-                        deals delivered straight to your inbox.
-                    </p>
-
-                    <label class="input-container flex m-auto">
-                        <input type="email" name="email" id="email" placeholder="Enter Your Email Address"
-                            autocomplete="off">
-                        <a href="#" class="btn">Subscribe</a>
-                    </label>
+        <!-- Newsletter Section -->
+        <section class="newsletter-section mt-3">
+            <div class="wrapper">
+                <div class="newsletter-container">
+                    <div class="newsletter-box">
+                        <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+                        <p class="newsletter-subtitle">Get the latest updates on new dishes, special offers, and exclusive discounts delivered directly to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe Now</button>
+                        </form>
+                        <div class="newsletter-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-gift benefit-icon"></i>
+                                <span>Exclusive Offers</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-clock benefit-icon"></i>
+                                <span>Early Access</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-tag benefit-icon"></i>
+                                <span>Special Discounts</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-
-
-
     </main>
-    <!-- FOOTER PART -->
 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FoodExpress</h3>
+                    <p>Delivering delicious food to your doorstep since 2010. Quality ingredients, amazing flavors, and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#services">Services</a>
+                        <a href="#about">About Us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>15/6 Block B Dharavi Navi Mumbai</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@foodieKitchen.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Foodie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart-message">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p>Add some delicious items!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cart-total-price">0</span></span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- External JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script src="main.js"></script>
-
 </body>
 
 </html>

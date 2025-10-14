@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/admin_pannel/admin.css">
+    <link rel="stylesheet" href="admin.css">
 </head>
 
 <body>
     <!-- Admin Login Modal -->
-    <div id="adminLoginModal" class="modal" style="display: none;">
+    <div id="adminLoginModal" class="modal">
         <div class="modal-content auth-modal">
             <div class="modal-header">
                 <h2>Admin Login</h2>
@@ -31,13 +31,13 @@
                     <button type="submit" class="btn btn-primary btn-full">Login as Admin</button>
                 </form>
                 <div class="auth-switch">
-                    <p><a href="../index.html">Back to Main Site</a></p>
+                    <p><a href="../index.html" class="btn">Back to Main Site</a></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="admin-container" id="adminPanel" style="display: none;">
+    <div class="admin-container" id="adminPanel">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="sidebar-header">
@@ -290,7 +290,7 @@
         </div>
     </div>
 
-    <script src="/admin_pannel/admin.js"></script>
+    <script src="admin.js"></script>
 </body>
 
 </html>

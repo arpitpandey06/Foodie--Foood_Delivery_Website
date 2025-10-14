@@ -1,7 +1,68 @@
 // Admin Panel JavaScript with Authentication
 class AdminPanel {
     constructor() {
-        this.menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
+        // Default 6 products
+        this.defaultMenuItems = [
+            {
+                id: 1,
+                name: "Double Cheese Burger",
+                price: 200,
+                image: "assets/burger.png",
+                inStock: true,
+                stock: 10
+            },
+            {
+                id: 2,
+                name: "Pepperoni Pizza",
+                price: 350,
+                image: "assets/pizza.png",
+                inStock: true,
+                stock: 8
+            },
+            {
+                id: 3,
+                name: "Crispy Fries",
+                price: 120,
+                image: "assets/fries.png",
+                inStock: true,
+                stock: 15
+            },
+            {
+                id: 4,
+                name: "Chicken Wings",
+                price: 280,
+                image: "assets/wings.png",
+                inStock: true,
+                stock: 12
+            },
+            {
+                id: 5,
+                name: "Caesar Salad",
+                price: 180,
+                image: "assets/salad.png",
+                inStock: false,
+                stock: 0
+            },
+            {
+                id: 6,
+                name: "Chocolate Shake",
+                price: 150,
+                image: "assets/shake.png",
+                inStock: true,
+                stock: 20
+            }
+        ];
+
+        // Load menu items from localStorage or use default
+        let storedItems = JSON.parse(localStorage.getItem('menuItems'));
+        if (!storedItems || storedItems.length === 0) {
+            // If no items in localStorage, use default items
+            this.menuItems = [...this.defaultMenuItems];
+            localStorage.setItem('menuItems', JSON.stringify(this.menuItems));
+        } else {
+            this.menuItems = storedItems;
+        }
+
         this.orders = JSON.parse(localStorage.getItem('orders')) || [];
         this.users = JSON.parse(localStorage.getItem('users')) || [];
         this.currentEditingItem = null;
@@ -277,7 +338,14 @@ class AdminPanel {
 
     loadMenuItems() {
         const menuContainer = document.getElementById('adminMenuItems');
+        if (!menuContainer) {
+            console.error('Admin menu container not found');
+            return;
+        }
+        
         menuContainer.innerHTML = '';
+
+        console.log('Loading menu items:', this.menuItems);
 
         if (this.menuItems.length === 0) {
             menuContainer.innerHTML = '<p>No menu items found. Add some items to get started.</p>';
@@ -748,7 +816,9 @@ class AdminPanel {
 
         // Remove message after 3 seconds
         setTimeout(() => {
-            messageDiv.remove();
+            if (messageDiv.parentNode) {
+                messageDiv.parentNode.removeChild(messageDiv);
+            }
         }, 3000);
     }
 }
@@ -807,8 +877,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Make adminPanel globally available
+window.adminPanel = null;
+
 // Initialize admin panel when DOM is loaded
-let adminPanel;
 document.addEventListener('DOMContentLoaded', () => {
-    adminPanel = new AdminPanel();
+    window.adminPanel = new AdminPanel();
 });

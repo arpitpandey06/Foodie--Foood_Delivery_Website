@@ -306,13 +306,11 @@ h3 {
     align-items: center;
     margin-bottom: 1.5rem;
     min-height: 200px;
-    /* Fixed height for images */
 }
 
 .order-card img {
     width: 100%;
     max-width: 220px;
-    /* Increased image size */
     height: 180px;
     object-fit: contain;
     filter: drop-shadow(rgba(0, 0, 0, 0.2) 0 10px 10px);
@@ -330,7 +328,6 @@ h3 {
     text-align: center;
     line-height: 1.3;
     min-height: 4.4rem;
-    /* Fixed height for title */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,82 +390,413 @@ h3 {
     z-index: 2;
 }
 
-/* Menu Container Improved */
+
 .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
-    /* Increased gap for better spacing */
     margin-top: 4rem;
     width: 100%;
     justify-items: center;
 }
 
-/* ====================================== */
-/* -------------Section 03---------------- */
-.swiper {
-    width: 100%;
-    height: 100%;
-    padding: 2rem 0;
+/* =========================================== */
+/* COMPLETELY NEW REVIEWS SECTION STYLES */
+/* =========================================== */
+.foodie-reviews {
+    padding: 6rem 0;
+    background: var(--eye-ball);
 }
 
-.profile {
-    width: 4rem;
-    aspect-ratio: 1;
-    border-radius: 100vw;
+.reviews-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.reviews-header {
+    margin-bottom: 4rem;
+}
+
+.reviews-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: var(--gold-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.reviews-title {
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead-color);
+    margin-bottom: 1.5rem;
+}
+
+.reviews-description {
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reviews-content {
+    width: 100%;
+}
+
+.reviews-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.review-stat-card {
+    background: var(--white-color);
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 2px solid rgba(255, 196, 0, 0.1);
+    text-align: center;
+}
+
+.review-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--gold-color);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--gold-color);
+    margin-bottom: 0.8rem;
+    line-height: 1;
+}
+
+.stat-stars {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.stat-stars i {
+    color: var(--gold-color);
+}
+
+.stat-label {
+    color: var(--lead-color);
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.reviews-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.review-item-card {
+    background: var(--white-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 2px solid rgba(255, 196, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
     overflow: hidden;
 }
 
-.profile img {
+.review-item-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold-color), var(--hint-yellow));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.review-item-card:hover::before {
+    transform: scaleX(1);
+}
+
+.review-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--gold-color);
+}
+
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.8rem;
+    gap: 1rem;
+}
+
+.reviewer-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    flex: 1;
+}
+
+.reviewer-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--gold-color);
+    flex-shrink: 0;
+}
+
+.reviewer-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.review-container {
-    width: 650px;
-    max-width: 100%;
+.reviewer-info {
     flex: 1;
 }
 
-.fa-star {
-    color: var(--gold-color);
-}
-
-.swiper-slide {
-    background: var(--white-color);
-    padding: 2rem;
-    border-radius: 2rem;
-    border: 1px solid var(--hint-yellow);
-    box-shadow: rgba(0, 0, 0, 0.05) 0 8px 8px;
-    transition: var(--transition);
-}
-
-.swiper-slide:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--gold-color);
-}
-
-.arrow {
-    width: 2.5rem;
-    aspect-ratio: 1;
-    border-radius: 100vw;
-    background: var(--gold-color);
+.reviewer-name {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
     color: var(--lead-color);
-    text-align: center;
-    line-height: 2.5rem;
-    transition: var(--transition);
+    font-weight: 600;
 }
 
-.arrow:hover {
-    background: var(--lead-color);
+.review-time {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.review-stars {
     color: var(--gold-color);
-    transform: scale(1.1);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.review-text-content {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.review-text-content p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    font-style: italic;
+}
+
+.review-food-info {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1.5rem;
+}
+
+.ordered-food {
+    color: var(--gold-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(255, 196, 0, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    display: inline-block;
+    border: 1px solid rgba(255, 196, 0, 0.2);
+}
+
+.reviews-actions {
+    margin-top: 3rem;
+}
+
+.reviews-btn {
+    background: var(--gold-color);
+    color: var(--white-color);
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.reviews-btn:hover {
+    background: var(--lead-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for New Reviews Section */
+@media screen and (max-width: 1024px) {
+    .reviews-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .reviews-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .reviews-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .foodie-reviews {
+        padding: 4rem 0;
+    }
+
+    .reviews-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .review-stat-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .reviews-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .review-item-card {
+        padding: 2rem;
+    }
+
+    .reviews-title {
+        font-size: 2.5rem;
+    }
+
+    .reviews-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .foodie-reviews {
+        padding: 3rem 0;
+    }
+
+    .reviews-wrapper {
+        padding: 0 1rem;
+    }
+
+    .reviews-stats-grid {
+        gap: 1.2rem;
+    }
+
+    .review-stat-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .review-item-card {
+        padding: 1.8rem;
+    }
+
+    .reviewer-details {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .reviewer-image {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .reviewer-name {
+        font-size: 1.2rem;
+    }
+
+    .review-card-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .reviews-title {
+        font-size: 2rem;
+    }
+
+    .reviews-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for review cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-item-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.review-stat-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animation for cards */
+.reviews-cards-grid .review-item-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reviews-cards-grid .review-item-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.reviews-cards-grid .review-item-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.reviews-cards-grid .review-item-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.reviews-stats-grid .review-stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reviews-stats-grid .review-stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.reviews-stats-grid .review-stat-card:nth-child(3) {
+    animation-delay: 0.3s;
 }
 
 /* =========================================== */

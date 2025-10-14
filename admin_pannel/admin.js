@@ -1,62 +1,69 @@
 // Admin Panel JavaScript with Authentication
 class AdminPanel {
     constructor() {
-        // Default 6 products
-        this.defaultMenuItems = [
+        // Food Menu Data - Default 8 products
+        const defaultMenuItems = [
             {
                 id: 1,
                 name: "Double Cheese Burger",
                 price: 200,
-                image: "assets/burger.png",
+                image: "assets/item_1.png",
                 inStock: true,
                 stock: 10
             },
             {
                 id: 2,
-                name: "Pepperoni Pizza",
-                price: 350,
-                image: "assets/pizza.png",
+                name: "Ichiraku Ramen",
+                price: 250,
+                image: "assets/item_4.png",
                 inStock: true,
                 stock: 8
             },
             {
                 id: 3,
-                name: "Crispy Fries",
-                price: 120,
-                image: "assets/fries.png",
+                name: "South Indian Thali",
+                price: 540,
+                image: "assets/item_3.png",
                 inStock: true,
                 stock: 15
             },
             {
                 id: 4,
-                name: "Chicken Wings",
-                price: 280,
-                image: "assets/wings.png",
+                name: "Chocolate Cake",
+                price: 300,
+                image: "assets/item_5.png",
                 inStock: true,
                 stock: 12
             },
             {
                 id: 5,
-                name: "Caesar Salad",
-                price: 180,
-                image: "assets/salad.png",
+                name: "Pizza",
+                price: 199,
+                image: "assets/item_11.png",
                 inStock: false,
                 stock: 0
             },
             {
-                id: 6,
-                name: "Chocolate Shake",
+                id: 7,
+                name: "Chowmein",
                 price: 150,
-                image: "assets/shake.png",
+                image: "assets/item_6.png",
                 inStock: true,
                 stock: 20
-            }
-        ];
+            },
+            {
+                id: 8,
+                name: "Chowmein",
+                price: 150,
+                image: "assets/item_6.png",
+                inStock: true,
+                stock: 20
+            },
 
+        ];
         // Load menu items from localStorage or use default
         let storedItems = JSON.parse(localStorage.getItem('menuItems'));
         if (!storedItems || storedItems.length === 0) {
-            // If no items in localStorage, use default items
             this.menuItems = [...this.defaultMenuItems];
             localStorage.setItem('menuItems', JSON.stringify(this.menuItems));
         } else {
@@ -342,7 +349,7 @@ class AdminPanel {
             console.error('Admin menu container not found');
             return;
         }
-        
+
         menuContainer.innerHTML = '';
 
         console.log('Loading menu items:', this.menuItems);

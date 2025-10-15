@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Condensed", sans-serif;
-}
-
+/* ===== CSS VARIABLES ===== */
 :root {
     --lead-color: #212121;
     --gold-color: #ffc400;
@@ -16,26 +10,24 @@
     --transition: all 0.3s ease-in-out;
 }
 
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 body {
     background: var(--eye-ball);
     overflow-x: hidden;
 }
 
-/* BASIC STYLING */
-a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: var(--lead-color);
-}
-
+/* ===== UTILITY CLASSES ===== */
 .flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-li {
-    list-style-type: none;
 }
 
 .between {
@@ -48,6 +40,26 @@ li {
 
 .gap-3 {
     gap: 3rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-half {
+    margin-top: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-top {
+    padding-top: 10rem;
 }
 
 .wrapper {
@@ -63,38 +75,17 @@ img {
     display: block;
 }
 
-.p-top {
-    padding-top: 10rem;
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--lead-color);
 }
 
-.text-center {
-    text-align: center;
+li {
+    list-style-type: none;
 }
 
-.mt-4 {
-    margin-top: 4rem;
-}
-
-.mt-half {
-    margin-top: 0.5rem;
-}
-
-.mt-3 {
-    margin-top: 3rem;
-}
-
-/* HEADER STYLING */
-.navbar {
-    min-height: 14vh;
-    position: relative;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--gold-color);
-}
-
+/* ===== BUTTON STYLES ===== */
 .btn {
     display: inline-block;
     padding: 0.9rem 2rem;
@@ -128,6 +119,49 @@ img {
 
 .btn-secondary:hover {
     background: #5a6268;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+.navbar {
+    min-height: 14vh;
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-color);
 }
 
 .cart-icon {
@@ -165,18 +199,7 @@ img {
     font-weight: bold;
 }
 
-/* SECTIONS STYLING */
-.hero-section {
-    min-height: calc(100vh - 14vh);
-}
-
-.content,
-.image-container,
-.service-card {
-    flex: 1;
-    flex-basis: 300px;
-}
-
+/* ===== TYPOGRAPHY ===== */
 h1 {
     font-size: 5.6vw;
     color: var(--lead-color);
@@ -184,6 +207,25 @@ h1 {
 
 h1 span {
     color: var(--gold-color);
+}
+
+h2 {
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead-color);
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: var(--lead-color);
+}
+
+h5 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: var(--gold-color);
+    text-transform: uppercase;
 }
 
 p {
@@ -196,6 +238,18 @@ p {
 .para {
     margin-block: 2rem;
     max-width: 550px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.image-container,
+.service-card {
+    flex: 1;
+    flex-basis: 300px;
 }
 
 .social-icon {
@@ -216,27 +270,7 @@ p {
     color: var(--white-color);
 }
 
-/* Section 01 */
-h5 {
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    color: var(--gold-color);
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 3.7rem;
-    text-transform: capitalize;
-    color: var(--lead-color);
-}
-
-h3 {
-    font-size: 1.8rem;
-    text-transform: capitalize;
-    color: var(--lead-color);
-}
-
-/* Services Cards - Smaller Size */
+/* ===== SERVICES SECTION ===== */
 .service-card {
     flex: 1;
     flex-basis: 280px;
@@ -272,8 +306,16 @@ h3 {
     object-fit: contain;
 }
 
-/* ====================================== */
-/* -------------Section 02 - MENU CARDS IMPROVED ---------------- */
+/* ===== MENU CARDS SECTION ===== */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+    width: 100%;
+    justify-items: center;
+}
+
 .order-card {
     flex: 1;
     flex-basis: 350px;
@@ -335,18 +377,22 @@ h3 {
 
 .order-card .price {
     font-size: 1.8rem;
-    /* Slightly larger price */
     color: var(--gold-color);
     margin: 1rem 0;
     font-weight: bold;
 }
 
-.order-card .btn {
-    margin-top: auto;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
+.stock-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gold-color);
+    color: var(--lead-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 2;
 }
 
 .out-of-stock {
@@ -377,32 +423,7 @@ h3 {
     background: #ccc;
 }
 
-.stock-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--gold-color);
-    color: var(--lead-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    z-index: 2;
-}
-
-
-.card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-top: 4rem;
-    width: 100%;
-    justify-items: center;
-}
-
-/* =========================================== */
-/* COMPLETELY NEW REVIEWS SECTION STYLES */
-/* =========================================== */
+/* ===== REVIEWS SECTION ===== */
 .foodie-reviews {
     padding: 6rem 0;
     background: var(--eye-ball);
@@ -439,10 +460,6 @@ h3 {
     line-height: 1.8rem;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.reviews-content {
-    width: 100%;
 }
 
 .reviews-stats-grid {
@@ -638,170 +655,7 @@ h3 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design for New Reviews Section */
-@media screen and (max-width: 1024px) {
-    .reviews-stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
-    .reviews-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .reviews-title {
-        font-size: 3rem;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    .foodie-reviews {
-        padding: 4rem 0;
-    }
-
-    .reviews-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-    }
-
-    .review-stat-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .stat-number {
-        font-size: 3rem;
-    }
-
-    .reviews-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .review-item-card {
-        padding: 2rem;
-    }
-
-    .reviews-title {
-        font-size: 2.5rem;
-    }
-
-    .reviews-description {
-        font-size: 1.1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .foodie-reviews {
-        padding: 3rem 0;
-    }
-
-    .reviews-wrapper {
-        padding: 0 1rem;
-    }
-
-    .reviews-stats-grid {
-        gap: 1.2rem;
-    }
-
-    .review-stat-card {
-        padding: 1.8rem 1.2rem;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-    }
-
-    .review-item-card {
-        padding: 1.8rem;
-    }
-
-    .reviewer-details {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .reviewer-image {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto;
-    }
-
-    .reviewer-name {
-        font-size: 1.2rem;
-    }
-
-    .review-card-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .reviews-title {
-        font-size: 2rem;
-    }
-
-    .reviews-subtitle {
-        font-size: 1rem;
-    }
-}
-
-/* Animation for review cards */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.review-item-card {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-.review-stat-card {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Stagger animation for cards */
-.reviews-cards-grid .review-item-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.reviews-cards-grid .review-item-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.reviews-cards-grid .review-item-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.reviews-cards-grid .review-item-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.reviews-stats-grid .review-stat-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.reviews-stats-grid .review-stat-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.reviews-stats-grid .review-stat-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-/* =========================================== */
-/* APP SECTION STYLES */
-/* =========================================== */
+/* ===== APP SECTION ===== */
 .app-container {
     background: var(--hint-yellow);
     padding: 3rem 6rem;
@@ -823,7 +677,6 @@ h3 {
     font-size: 4.5rem;
 }
 
-/* Bounce Animation */
 @keyframes bounce {
 
     0%,
@@ -847,9 +700,7 @@ h3 {
     animation: bounce 2s infinite;
 }
 
-/* =========================================== */
-/* NEWSLETTER SECTION STYLES */
-/* =========================================== */
+/* ===== NEWSLETTER SECTION ===== */
 .newsletter-section {
     padding: 6rem 0;
 }
@@ -965,9 +816,7 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* =========================================== */
-/* CART MODAL STYLES - FIXED & UPDATED */
-/* =========================================== */
+/* ===== CART & MODAL STYLES ===== */
 .modal {
     display: none;
     position: fixed;
@@ -1054,7 +903,6 @@ h3 {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    /* Important for flex scrolling */
 }
 
 .modal-footer {
@@ -1079,17 +927,14 @@ h3 {
     font-weight: bold;
 }
 
-/* Cart Items */
 .cart-items {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     flex: 1;
     min-height: 0;
-    /* Important for scrolling */
     overflow-y: auto;
     padding-right: 5px;
-    /* Space for scrollbar */
 }
 
 .cart-items::-webkit-scrollbar {
@@ -1120,6 +965,19 @@ h3 {
     background: var(--white-color);
     transition: var(--transition);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInItem 0.3s ease-out;
+}
+
+@keyframes slideInItem {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .cart-item:hover {
@@ -1302,12 +1160,12 @@ h3 {
     padding: 1rem 2rem;
 }
 
-/* Checkout Modal Specific */
-.checkout-modal {
-    max-width: 700px;
+/* ===== AUTHENTICATION STYLES ===== */
+.auth-modal {
+    max-width: 500px;
 }
 
-.checkout-form {
+.auth-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -1346,130 +1204,10 @@ h3 {
     background: #fffdf7;
 }
 
-.order-summary {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    border: 2px solid #e9ecef;
-    margin-top: 1rem;
-}
-
-.order-summary h3 {
-    margin-bottom: 1.5rem;
-    color: var(--lead-color);
-    font-size: 1.4rem;
-    text-align: center;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--gold-color);
-}
-
-.checkout-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid #dee2e6;
-    font-size: 1.1rem;
-}
-
-.checkout-item:last-child {
-    border-bottom: none;
-}
-
-.checkout-item-name {
-    flex: 1;
-    color: var(--lead-color);
-    font-weight: 500;
-}
-
-.checkout-item-quantity {
-    color: #6c757d;
-    margin: 0 1rem;
-    font-weight: bold;
-}
-
-.checkout-item-price {
-    color: var(--gold-color);
-    font-weight: bold;
-    min-width: 80px;
-    text-align: right;
-}
-
-.order-total {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 3px solid var(--gold-color);
-    text-align: right;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.order-total-amount {
-    color: var(--gold-color);
-    font-size: 1.5rem;
-}
-
-/* Success Message */
-.success-message {
-    text-align: center;
-    padding: 3rem 2rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-}
-
-.success-message i {
-    font-size: 5rem;
-    color: #28a745;
-    margin-bottom: 2rem;
-}
-
-.success-message h3 {
-    color: #28a745;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-}
-
-.success-message p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-.success-message strong {
-    color: var(--lead-color);
-    background: var(--hint-yellow);
-    padding: 0.3rem 0.8rem;
-    border-radius: 0.5rem;
-}
-
-/* Auth Modal Styles */
-.auth-modal {
-    max-width: 500px;
-}
-
-.auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-}
-
-.btn-full {
-    width: 100%;
-    justify-content: center;
 }
 
 .form-options {
@@ -1518,7 +1256,6 @@ h3 {
     text-decoration: underline;
 }
 
-/* Auth Buttons */
 .auth-buttons {
     display: flex;
     gap: 1rem;
@@ -1535,124 +1272,7 @@ h3 {
     font-weight: bold;
 }
 
-/* Mobile Auth */
-.auth-mobile {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.user-mobile {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-/* Success/Error Messages */
-.message {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    z-index: 10000;
-    min-width: 300px;
-    font-weight: bold;
-}
-
-.message.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.message.error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-/* Notification */
-.notification {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: var(--gold-color);
-    color: var(--lead-color);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    animation: slideInRight 0.3s ease-out;
-    font-weight: bold;
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Animation for cart items */
-@keyframes slideInItem {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.cart-item {
-    animation: slideInItem 0.3s ease-out;
-}
-
-/* Loading state for buttons */
-.btn-loading {
-    position: relative;
-    color: transparent !important;
-}
-
-.btn-loading::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -10px;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* =========================================== */
-/* REDESIGNED FOOTER STYLES */
-/* =========================================== */
+/* ===== FOOTER STYLES ===== */
 #footer {
     background: linear-gradient(135deg, var(--lead-color) 0%, #2c2c2c 100%);
     color: var(--white-color);
@@ -1668,7 +1288,6 @@ h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Brand Section */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -1714,7 +1333,6 @@ h3 {
     transform: translateY(-3px);
 }
 
-/* Links Groups */
 .footer-links-group h4 {
     color: var(--gold-color);
     font-size: 1.3rem;
@@ -1739,7 +1357,6 @@ h3 {
     padding-left: 5px;
 }
 
-/* Contact Info */
 .footer-contact h4 {
     color: var(--gold-color);
     font-size: 1.3rem;
@@ -1772,7 +1389,6 @@ h3 {
     line-height: 1.4;
 }
 
-/* Newsletter */
 .footer-newsletter h4 {
     color: var(--gold-color);
     font-size: 1.3rem;
@@ -1823,7 +1439,6 @@ h3 {
     background: var(--hint-yellow);
 }
 
-/* Footer Bottom */
 .footer-bottom {
     padding: 2rem 0;
 }
@@ -1880,11 +1495,62 @@ h3 {
     color: var(--gold-color);
 }
 
-/* =========================================== */
-/* IMPROVED MOBILE RESPONSIVENESS */
-/* =========================================== */
+/* ===== NOTIFICATION & MESSAGE STYLES ===== */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: var(--gold-color);
+    color: var(--lead-color);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideInRight 0.3s ease-out;
+    font-weight: bold;
+}
 
-@media screen and (max-width:1024px) {
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 10000;
+    min-width: 300px;
+    font-weight: bold;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet Styles (1024px and below) */
+@media screen and (max-width: 1024px) {
     h1 {
         font-size: 4.5rem;
     }
@@ -1893,29 +1559,11 @@ h3 {
         font-size: 3rem;
     }
 
-    .review-container {
-        width: 100%;
-    }
-
-    #reviews .flex {
-        flex-direction: column;
-    }
-
-    #reviews .image-container {
-        margin-bottom: 3rem;
-    }
-
-    .app-container .content h2 {
-        font-size: 3.5rem;
-    }
-
-    /* Services cards responsive */
     .service-card {
         flex-basis: 250px;
         max-width: 280px;
     }
 
-    /* Menu cards improved for tablet */
     .order-card {
         flex-basis: 320px;
         min-height: 460px;
@@ -1926,7 +1574,24 @@ h3 {
         gap: 2rem;
     }
 
-    /* Footer responsive */
+    .app-container .content h2 {
+        font-size: 3.5rem;
+    }
+
+    .reviews-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .reviews-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .reviews-title {
+        font-size: 3rem;
+    }
+
     .footer-main {
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
@@ -1942,7 +1607,6 @@ h3 {
         max-width: 500px;
     }
 
-    /* Modal responsive */
     .modal-content {
         width: 95%;
         margin: 5% auto;
@@ -1950,7 +1614,8 @@ h3 {
     }
 }
 
-@media screen and (max-width:780px) {
+/* Mobile Styles (780px and below) */
+@media screen and (max-width: 780px) {
 
     .navlist,
     .desktop-action .btn {
@@ -1989,10 +1654,8 @@ h3 {
         visibility: visible;
     }
 
-    /* Sections Styling */
     h1 {
         font-size: 3.2rem;
-        /* Adjusted for mobile */
         line-height: 1.2;
     }
 
@@ -2024,10 +1687,8 @@ h3 {
         justify-content: center;
     }
 
-    /* Section 01 */
     h2 {
         font-size: 2.2rem;
-        /* Better for mobile */
         line-height: 1.3;
     }
 
@@ -2035,7 +1696,6 @@ h3 {
         font-size: 1.5rem;
     }
 
-    /* Services cards responsive */
     .service-card {
         flex-basis: 100%;
         max-width: 320px;
@@ -2048,12 +1708,10 @@ h3 {
         height: 6rem;
     }
 
-    /* Section 02 - IMPROVED MOBILE MENU CARDS */
     .order-card {
         flex-basis: 100%;
         margin-bottom: 2rem;
         min-height: 420px;
-        /* Adjusted for mobile */
         padding: 1.5rem;
         width: 100%;
         max-width: 400px;
@@ -2062,14 +1720,12 @@ h3 {
     .card-list {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        /* Reduced gap for mobile */
         margin-top: 3rem;
         width: 100%;
     }
 
     .card-image {
         min-height: 160px;
-        /* Adjusted for mobile */
     }
 
     .order-card img {
@@ -2089,19 +1745,8 @@ h3 {
 
     .p-top {
         padding-top: 4rem;
-        /* Reduced padding for mobile */
     }
 
-    /* Section 03 */
-    .swiper-slide {
-        padding: 1.5rem;
-    }
-
-    .swiper {
-        padding: 1rem 0;
-    }
-
-    /* App Section */
     .app-container {
         padding: 2rem;
         flex-direction: column;
@@ -2112,7 +1757,6 @@ h3 {
         font-size: 2.5rem;
     }
 
-    /* Newsletter */
     .newsletter-form {
         flex-direction: column;
     }
@@ -2129,7 +1773,41 @@ h3 {
         gap: 1.5rem;
     }
 
-    /* Footer responsive */
+    .foodie-reviews {
+        padding: 4rem 0;
+    }
+
+    .reviews-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .review-stat-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .reviews-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .review-item-card {
+        padding: 2rem;
+    }
+
+    .reviews-title {
+        font-size: 2.5rem;
+    }
+
+    .reviews-description {
+        font-size: 1.1rem;
+    }
+
     .footer-main {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2163,7 +1841,6 @@ h3 {
         justify-content: center;
     }
 
-    /* Modal responsive */
     .modal-footer {
         flex-direction: column;
     }
@@ -2197,7 +1874,6 @@ h3 {
         padding: 1.5rem;
     }
 
-    /* Auth responsive */
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -2213,14 +1889,14 @@ h3 {
     }
 }
 
-@media screen and (max-width:480px) {
+/* Small Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
     .wrapper {
         padding-inline: 1rem;
     }
 
     h1 {
         font-size: 2.4rem;
-        /* Perfect for small mobile */
         line-height: 1.2;
     }
 
@@ -2272,7 +1948,6 @@ h3 {
         gap: 2rem;
     }
 
-    /* Services cards mobile */
     .service-card {
         padding: 1.2rem;
         max-width: 280px;
@@ -2292,7 +1967,6 @@ h3 {
         font-size: 0.9rem;
     }
 
-    /* Menu cards mobile - PERFECTED */
     .order-card {
         min-height: 380px;
         padding: 1.2rem;
@@ -2302,7 +1976,6 @@ h3 {
 
     .card-list {
         gap: 1.2rem;
-        /* Minimal gap for small screens */
         margin-top: 2rem;
     }
 
@@ -2332,20 +2005,6 @@ h3 {
         font-size: 1rem;
     }
 
-    .swiper-slide {
-        padding: 1rem;
-    }
-
-    .profile {
-        width: 3rem;
-    }
-
-    .arrow {
-        width: 2rem;
-        line-height: 2rem;
-    }
-
-    /* App Section */
     .app-container {
         padding: 1.5rem;
     }
@@ -2354,7 +2013,6 @@ h3 {
         font-size: 2rem;
     }
 
-    /* Newsletter */
     .newsletter-box {
         padding: 1.5rem;
     }
@@ -2377,7 +2035,61 @@ h3 {
         justify-content: center;
     }
 
-    /* Footer mobile */
+    .foodie-reviews {
+        padding: 3rem 0;
+    }
+
+    .reviews-wrapper {
+        padding: 0 1rem;
+    }
+
+    .reviews-stats-grid {
+        gap: 1.2rem;
+    }
+
+    .review-stat-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .review-item-card {
+        padding: 1.8rem;
+    }
+
+    .reviewer-details {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .reviewer-image {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .reviewer-name {
+        font-size: 1.2rem;
+    }
+
+    .review-card-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .reviews-title {
+        font-size: 2rem;
+    }
+
+    .reviews-subtitle {
+        font-size: 1rem;
+    }
+
     .footer-main {
         gap: 1.5rem;
     }
@@ -2406,7 +2118,6 @@ h3 {
         gap: 0.5rem;
     }
 
-    /* Modal mobile */
     .modal-content {
         margin: 0;
         width: 100%;
@@ -2486,7 +2197,6 @@ h3 {
         font-size: 1rem;
     }
 
-    /* Message responsive */
     .message {
         position: fixed;
         top: 80px;
@@ -2503,7 +2213,7 @@ h3 {
     }
 }
 
-/* Additional improvements for very small screens */
+/* Extra Small Screens (360px and below) */
 @media screen and (max-width: 360px) {
     .order-card {
         min-height: 360px;

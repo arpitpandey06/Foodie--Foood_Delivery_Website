@@ -1,8 +1,8 @@
-// Admin Panel JavaScript with Authentication
+// Enhanced Admin Panel JavaScript with Authentication
 class AdminPanel {
     constructor() {
         // Food Menu Data - Default 8 products
-        const defaultMenuItems = [
+        this.defaultMenuItems = [
             {
                 id: 1,
                 name: "Double Cheese Burger",
@@ -59,7 +59,6 @@ class AdminPanel {
                 inStock: true,
                 stock: 20
             },
-
         ];
         // Load menu items from localStorage or use default
         let storedItems = JSON.parse(localStorage.getItem('menuItems'));
@@ -807,18 +806,6 @@ class AdminPanel {
         const messageDiv = document.createElement('div');
         messageDiv.className = `admin-message message ${type}`;
         messageDiv.textContent = message;
-        messageDiv.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 10000;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            color: white;
-            font-weight: bold;
-            ${type === 'success' ? 'background: #28a745;' : 'background: #dc3545;'}
-        `;
-
         document.body.appendChild(messageDiv);
 
         // Remove message after 3 seconds
@@ -829,60 +816,6 @@ class AdminPanel {
         }, 3000);
     }
 }
-
-// Add CSS for simple charts
-const style = document.createElement('style');
-style.textContent = `
-    .simple-chart {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .chart-bar {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    
-    .bar-label {
-        min-width: 80px;
-        font-size: 0.8rem;
-    }
-    
-    .bar-value {
-        background: var(--primary-color);
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        color: var(--secondary-color);
-        font-weight: bold;
-        font-size: 0.8rem;
-        transition: width 0.3s ease;
-    }
-    
-    .stock-status {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .status-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .status-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-    }
-    
-    .in-stock .status-dot { background: #28a745; }
-    .low-stock .status-dot { background: #ffc107; }
-    .out-of-stock .status-dot { background: #dc3545; }
-`;
-document.head.appendChild(style);
 
 // Make adminPanel globally available
 window.adminPanel = null;

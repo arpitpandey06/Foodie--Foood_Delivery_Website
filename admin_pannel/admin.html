@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Foodie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
 </head>
 
@@ -16,22 +14,25 @@
     <div id="adminLoginModal" class="modal">
         <div class="modal-content auth-modal">
             <div class="modal-header">
-                <h2>Admin Login</h2>
+                <h2><i class="fas fa-lock"></i> Admin Login</h2>
             </div>
             <div class="modal-body">
                 <form id="adminLoginForm" class="auth-form">
                     <div class="form-group">
-                        <label for="adminUsername">Username</label>
+                        <label for="adminUsername"><i class="fas fa-user"></i> Username</label>
                         <input type="text" id="adminUsername" name="username" required>
                     </div>
                     <div class="form-group">
-                        <label for="adminPassword">Password</label>
+                        <label for="adminPassword"><i class="fas fa-key"></i> Password</label>
                         <input type="password" id="adminPassword" name="password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Login as Admin</button>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i> Login as Admin
+                    </button>
                 </form>
                 <div class="auth-switch">
-                    <p><a href="../index.html" class="btn">Back to Main Site</a></p>
+                    <p><a href="../index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Main
+                            Site</a></p>
                 </div>
             </div>
         </div>
@@ -41,7 +42,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="sidebar-header">
-                <h2><i class="fas fa-utensils"></i> Foodie Admin</h2>
+                <h2><i class="fas fa-utensils"></i> <span>Foodie Admin</span></h2>
             </div>
             <nav class="sidebar-nav">
                 <a href="#dashboard" class="nav-item active" data-tab="dashboard">
@@ -131,13 +132,13 @@
 
                 <div class="charts-section">
                     <div class="chart-card">
-                        <h3>Recent Orders</h3>
+                        <h3><i class="fas fa-chart-line"></i> Recent Orders</h3>
                         <div id="recentOrdersChart" class="chart-placeholder">
                             <p>Recent orders will be displayed here</p>
                         </div>
                     </div>
                     <div class="chart-card">
-                        <h3>Stock Status</h3>
+                        <h3><i class="fas fa-boxes"></i> Stock Status</h3>
                         <div id="stockChart" class="chart-placeholder">
                             <p>Stock status will be displayed here</p>
                         </div>
@@ -145,7 +146,7 @@
                 </div>
 
                 <div class="recent-activity">
-                    <h3>Recent Activity</h3>
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
                     <div class="activity-list" id="recentActivity">
                         <!-- Activity items will be loaded here -->
                     </div>
